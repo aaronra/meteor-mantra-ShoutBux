@@ -1,0 +1,101 @@
+@import "_components";
+
+html, body, #react-root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+
+.form-box {
+  margin: 0 auto;
+  float: none;
+}
+
+.form-top {
+  overflow: hidden;
+  padding: 0 25px 15px 25px;
+  background: $top-box-color;
+  border-radius: 4px 4px 0 0;
+  text-align: left;
+  .form-top-left {
+    float: left;
+    width: 75%;
+    padding-top: 25px;
+
+    h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+    p {
+      opacity: 0.8;
+      color: #fff;
+    }
+  }
+  .form-top-right {
+    float: left;
+    width: 25%;
+    padding-top: 5px;
+    font-size: 66px;
+    color: #fff;
+    line-height: 100px;
+    text-align: right;
+    opacity: 0.3;
+  }
+}
+
+.form-bottom {
+  padding: 25px 25px 30px 25px;
+  background: $bottom-box-color;
+  border-radius: 0 0 4px 4px;
+  text-align: left;
+}
+
+i.fa-5 {
+  font-size: 12em;
+}
+
+.logo {
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+textarea.form-control {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #fff;
+  border: 3px solid #fff;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #888;
+}
+
+button.btn {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #19b9e7;
+  border: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.6;
+    color: #fff;
+  }
+}
