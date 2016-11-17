@@ -1,3 +1,6 @@
+import Shouts from './shouts';
+
 export {
-  undefined
+  undefined,
+  Shouts
 };

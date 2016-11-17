@@ -20,7 +20,7 @@ class Login extends React.Component {
         <div className="form-top">
           <div className="form-top-left">
             <h3>Login</h3>
-            <p>Enter username and password to log on:</p>
+            <p>Enter username and password to log in:</p>
           </div>
           <div className="form-top-right">
             <i className="fa fa-lock"></i>

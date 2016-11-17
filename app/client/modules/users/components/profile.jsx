@@ -8,7 +8,6 @@ class Profile extends React.Component {
   render() {
     const {currentUser}= this.props;
     const {profile}= currentUser;
-    console.log(currentUser);
     return (
       <section id="user-profile">
         <div className="col-md-12 col-xs-12">
@@ -16,7 +15,7 @@ class Profile extends React.Component {
             <div className="panel panel-default userBox">
               <div className="panel-body">
                 <div className="col-lg-5">
-                  <img src={(profile)?profile.photo:'/assets/users/photo/defaultPhoto.jpg'}
+                  <img src={(profile) ? profile.photo : '/assets/users/photo/defaultPhoto.jpg'}
                        className="inline profile-photo lg"/>
                   <div className="inline">
                     <ul>
@@ -44,8 +43,8 @@ class Profile extends React.Component {
                     </tbody>
                   </table>
                 </div>
-                <div className="col-lg-2 ">
-                  <button type="button" className="btn pull-right">Sign in!</button>
+                <div className="col-lg-2">
+                  <button type="button" className="btn pull-right">Log out!</button>
                 </div>
               </div>
             </div>

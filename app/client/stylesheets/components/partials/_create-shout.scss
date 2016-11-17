@@ -1,6 +1,9 @@
 section#create-shout {
-  #shoutText {
+  #shoutInput {
     min-height: 75px;
     resize: none;
+  }
+  button {
+    margin-top: 5px;
   }
 }
