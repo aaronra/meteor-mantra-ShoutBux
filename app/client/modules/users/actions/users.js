@@ -1,12 +1,11 @@
 export default {
-  login({Meteor, LocalState, FlowRouter}, email, password) {
-    if (!email || !password) {
-      return LocalState.set('LOGIN_ERROR', 'Email & Password are required!');
+  login({Meteor, LocalState, FlowRouter}, username, password) {
+    LocalState.set('LOGIN_ERROR', null);
+    if (!username || !password) {
+      return LocalState.set('LOGIN_ERROR', 'User name and Password required!');
     }
 
-    LocalState.set('LOGIN_ERROR', null);
-
-    Meteor.loginWithPassword(email, password, (err) => {
+    Meteor.loginWithPassword(username, password, (err) => {
       if (err && err.reason) {
         return LocalState.set('LOGIN_ERROR', err.reason);
       }
@@ -15,5 +14,8 @@ export default {
         FlowRouter.go(path);
       }
     });
+  },
+  clearErrors({LocalState}) {
+    return LocalState.set('LOGIN_ERROR', null);
   }
 }

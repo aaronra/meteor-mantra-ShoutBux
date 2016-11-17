@@ -9,7 +9,8 @@ export const composer = ({context}, onData) => {
 };
 
 export const depsMapper = (context, actions) => ({
-  submitAction: actions.users.login,
+  loginAction: actions.users.login,
+  clearErrors: actions.users.clearErrors,
   context: () => context
 });
 

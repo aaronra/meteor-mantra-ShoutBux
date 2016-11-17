@@ -6,8 +6,10 @@ class Login extends React.Component {
     super(props);
   }
 
-  onSubmit(data) {
-    this.props.submitAction(data.email, data.password);
+  _login() {
+    const {loginAction} = this.props;
+    console.log('logging in');
+    loginAction(this.refs.username.value, this.refs.password.value);
   };
 
   render() {
@@ -26,16 +28,16 @@ class Login extends React.Component {
         </div>
         <div className="form-bottom">
           {err ?
-            <span className="error-container">
-                        <span className="error-text">
-                          {err}
-                        </span>
-                      </span> : null }
+            <div className="alert alert-danger" role="alert">
+              <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span className="sr-only">Error: </span>
+              {err}
+            </div> : null }
 
-          <form onSubmit={this.onSubmit} className="login-form">
+          <form className="login-form">
             <div className="form-group">
               <label className="sr-only" htmlFor="email">Username</label>
-              <input type="email" name="email" ref="email" placeholder="Email..."
+              <input type="text" name="username" ref="username" placeholder="User name..."
                      className="form-control"/>
             </div>
             <div className="form-group">
@@ -43,7 +45,7 @@ class Login extends React.Component {
               <input type="password" name="password" ref="password" placeholder="Password..."
                      className="form-control"/>
             </div>
-            <button type="submit" className="btn full-width">Sign in!</button>
+            <button type="button" className="btn full-width" onClick={this._login.bind(this)}>Sign in!</button>
           </form>
         </div>
       </div>
