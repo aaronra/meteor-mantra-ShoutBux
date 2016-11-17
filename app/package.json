@@ -13,8 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "formsy-react": "^0.18.1",
-    "formsy-react-components": "^0.8.1",
+    "bcrypt": "^0.8.7",
     "mantra-core": "^1.2.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",

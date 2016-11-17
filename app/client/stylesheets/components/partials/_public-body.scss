@@ -7,4 +7,39 @@ section#public-body {
   height: 100%;
   width: 100%;
 
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  textarea.form-control {
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #fff;
+    border: 3px solid #fff;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+  }
+
+  button.btn {
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #19b9e7;
+    border: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.6;
+      color: #fff;
+    }
+  }
 }

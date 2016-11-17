@@ -1,8 +1,8 @@
 const {describe, it} = global;
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import Login from '../login/login';
+import Home from '../home';
 
-describe('users.components.login', () => {
+describe('core.components.home', () => {
   it('should do something');
 });

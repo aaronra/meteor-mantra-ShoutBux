@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '/client/modules/users/containers/login';
-import Logo from '/client/utils/twitter_logo';
+
 
 class PublicLanding extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class PublicLanding extends React.Component {
 
         <div className="container">
           <div className="row">
-            <Logo/>
+            <h2 className="title">ShoutBux</h2>
             <Login/>
           </div>
         </div>

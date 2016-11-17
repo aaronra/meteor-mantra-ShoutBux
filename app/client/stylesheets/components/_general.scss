@@ -13,6 +13,26 @@ body {
   text-align: center;
 }
 
+.title {
+  box-sizing: content-box;
+  cursor: pointer;
+  border: none;
+  font: normal 72px/normal "Trebuchet MS", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 0 1px 0 rgb(204, 204, 204), 0 2px 0 rgb(201, 201, 201), 0 3px 0 rgb(187, 187, 187), 0 4px 0 rgb(185, 185, 185), 0 5px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
+}
+
+.navbar-default {
+  background-color: $primary-color;
+  .navbar-brand {
+    color: #fff !important;
+  }
+
+}
+
 .form-box {
   margin: 0 auto;
   float: none;
@@ -65,37 +85,3 @@ i.fa-5 {
   color: #fff;
 }
 
-input[type="text"],
-input[type="password"],
-textarea,
-textarea.form-control {
-  height: 50px;
-  margin: 0;
-  padding: 0 20px;
-  vertical-align: middle;
-  background: #fff;
-  border: 3px solid #fff;
-
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 50px;
-  color: #888;
-}
-
-button.btn {
-  height: 50px;
-  margin: 0;
-  padding: 0 20px;
-  vertical-align: middle;
-  background: #19b9e7;
-  border: 0;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 50px;
-  color: #fff;
-
-  &:hover {
-    opacity: 0.6;
-    color: #fff;
-  }
-}

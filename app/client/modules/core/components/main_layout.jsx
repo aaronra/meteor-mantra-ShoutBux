@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Layout = ({header = () => null}, {content = () => null}, {footer = () => null}) => (
+const Layout = ({header = () => null, content = () => null}) => (
   <section id="body">
     {header()}
-    {content()}
-    {footer()}
+    <div className="container">
+      {content()}
+    </div>
   </section>
 );
 
