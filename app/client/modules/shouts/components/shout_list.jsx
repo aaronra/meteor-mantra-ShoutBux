@@ -1,5 +1,6 @@
 import React from 'react';
 import PanelHeading from '/client/utils/panel_heading';
+import ShoutItem from '/client/modules/shouts/containers/shout_item';
 
 class ShoutList extends React.Component {
   constructor(props) {
@@ -7,16 +8,15 @@ class ShoutList extends React.Component {
   }
 
   render() {
+    const {shouts} = this.props;
     return (
       <section id="shout-list" className="panel panel-default">
         <PanelHeading title="Shouts"/>
-
         <ul className="list-group">
-          <li className="list-group-item">Cras justo odio</li>
-          <li className="list-group-item">Dapibus ac facilisis in</li>
-          <li className="list-group-item">Morbi leo risus</li>
-          <li className="list-group-item">Porta ac consectetur ac</li>
-          <li className="list-group-item">Vestibulum at eros</li>
+          {(shouts) ? shouts.map((shout, index)=>(
+            <ShoutItem shout={shout} key={index}/>
+          ))
+            : <li><h3>No Shout posted yet!</h3></li>}
         </ul>
 
       </section>

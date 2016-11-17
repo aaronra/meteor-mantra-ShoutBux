@@ -110,6 +110,10 @@ textarea.form-control {
   box-shadow: none;
 }
 
+textarea.form-control {
+  line-height: normal !important;
+}
+
 button.btn {
   height: 50px;
   margin: 0;
@@ -151,7 +155,8 @@ i.fa-5 {
 
   }
   &.sm {
-
+    height: 3.5em;
+    width: 3.5em;
   }
 }
 
