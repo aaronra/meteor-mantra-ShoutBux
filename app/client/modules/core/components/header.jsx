@@ -17,12 +17,13 @@ class Header extends React.Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="/dashboard"><i className="fa fa-twitter"></i> ShoutBux</a>
+            <a className="navbar-brand" href="/dashboard">ShoutBux</a>
           </div>
         </div>
       </nav>
     );
   }
 }
+
 
 export default Header;

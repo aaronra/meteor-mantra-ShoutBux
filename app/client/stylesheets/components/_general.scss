@@ -5,12 +5,23 @@ html, body, #react-root {
 }
 
 body {
+  background-image: url("/assets/background/bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #888;
   line-height: 30px;
-  text-align: center;
+}
+
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1em 0;
 }
 
 .title {
@@ -23,6 +34,10 @@ body {
   -o-text-overflow: clip;
   text-overflow: clip;
   text-shadow: 0 1px 0 rgb(204, 204, 204), 0 2px 0 rgb(201, 201, 201), 0 3px 0 rgb(187, 187, 187), 0 4px 0 rgb(185, 185, 185), 0 5px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
+}
+
+.panel-title {
+  font-size: 24px;
 }
 
 .navbar-default {
@@ -77,6 +92,47 @@ body {
   text-align: left;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+textarea.form-control {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #fff;
+  border: 3px solid #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #888;
+  box-shadow: none;
+}
+
+button.btn {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #19b9e7;
+  border: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.6;
+    color: #fff;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0 0.5em;
+}
+
 i.fa-5 {
   font-size: 12em;
 }
@@ -85,3 +141,32 @@ i.fa-5 {
   color: #fff;
 }
 
+.profile-photo {
+  border-radius: 5px;
+  &.lg {
+    height: 7em;
+    width: 7em;
+  }
+  &.md {
+
+  }
+  &.sm {
+
+  }
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,
+.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}

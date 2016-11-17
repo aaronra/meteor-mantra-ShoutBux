@@ -2,10 +2,14 @@ import {useDeps, composeAll, composeWithTracker, compose} from 'mantra-core';
 
 import Home from '../components/home.jsx';
 
-export const composer = ({context}, onData) => {
+export const composer = ({context, userId}, onData) => {
   const {Meteor, Collections} = context();
-
-  onData(null, {});
+  const subscriptionsReady = [Meteor.subscribe('user.current', userId).ready];
+  const dataReady = ()=> {
+    const currentUser = (userId) ? Meteor.users.findOne({_id: userId}) : Meteor.user();
+    onData(null, {currentUser});
+  };
+  (subscriptionsReady) ? dataReady() : onData();
 };
 
 export const depsMapper = (context, actions) => ({

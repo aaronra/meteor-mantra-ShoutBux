@@ -2,8 +2,7 @@ import React from 'react';
 import {mount} from 'react-mounter';
 
 import MainLayout from './components/main_layout.jsx';
-import Header from './components/header';
-import Home from './components/home';
+import Home from './containers/home';
 
 
 export default function (injectDeps, {FlowRouter}) {
@@ -13,7 +12,6 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'home',
     action() {
       mount(MainLayoutCtx, {
-        header: () => (<Header />),
         content: () => (<Home />)
       });
     }

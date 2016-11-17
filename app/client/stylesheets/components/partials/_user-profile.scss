@@ -1,0 +1,15 @@
+section#user-profile {
+  .name {
+    @extend .no-margin;
+    font-weight: bold;
+    color: #000000;
+  }
+  .col-lg-6 {
+    padding: 0;
+  }
+  .profile-counts {
+    th, td {
+      text-align: center;
+    }
+  }
+}
