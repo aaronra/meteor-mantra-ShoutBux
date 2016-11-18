@@ -44,10 +44,9 @@ Requirements
  <a name="notes"></a>
  
  **Setting Up:** How to setup and run the app
+ run this command
  > ```bash
- > cd app
- > npm install
- > meteor
+ > cd app && npm install && meteor
  > ```
  
   **Testing:** How to test the app
