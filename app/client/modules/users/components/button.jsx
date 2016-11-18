@@ -12,7 +12,7 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button type="button" onClick={this._addFriend.bind(this)} className="btn btn-block">
+      <button type="button" onClick={this._addFriend.bind(this)} className="btn add">
         Add
       </button>
     );

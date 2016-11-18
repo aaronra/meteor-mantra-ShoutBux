@@ -12,4 +12,22 @@ section#user-profile {
       text-align: center;
     }
   }
+  .col-lg-2 {
+    a {
+      margin-top: 5px;
+      height: 50px;
+      margin: 0;
+      padding: 0 20px;
+      vertical-align: middle;
+      background: #19b9e7;
+      border: 0;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 50px;
+      color: #fff;
+    }
+    button {
+      background-color: #3d92ab;
+    }
+  }
 }

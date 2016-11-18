@@ -22,11 +22,6 @@ class Profile extends React.Component {
                     <ul>
                       <li><h2 className="name">{(profile) ? profile.fullname : ''}</h2></li>
                       <li>@{currentUser.username}</li>
-                      <li>
-                        {(Meteor.userId() != currentUser._id) ?
-                          <a href="/dashboard" className="btn">Timeline</a>
-                          : ''}
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -49,6 +44,9 @@ class Profile extends React.Component {
                   </table>
                 </div>
                 <div className="col-lg-2">
+                  {(Meteor.userId() != currentUser._id) ?
+                    <a href="/dashboard" className="btn pull-right">Back to Timeline</a>
+                    : ''}
                   <button type="button" onClick={logout.bind(this)} className="btn pull-right">Log out!</button>
                 </div>
               </div>

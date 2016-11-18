@@ -43,12 +43,16 @@ Requirements
 
  <a name="notes"></a>
  
- **Setting Up** How to setup and run the app
+ **Setting Up:** How to setup and run the app
  > ```bash
  > cd app
- > rm -rf node_modules
  > npm install
  > meteor
  > ```
+ 
+  **Testing:** How to test the app
+  > ```bash
+  > npm test
+  > ```
  
  **NOTE:** app running on localhost:3000
