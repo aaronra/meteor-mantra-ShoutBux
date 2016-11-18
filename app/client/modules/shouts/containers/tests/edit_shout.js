@@ -5,16 +5,17 @@ import {composer} from '../edit_shout';
 
 describe('shouts.containers.edit_shout', () => {
   describe('composer', () => {
-
-//    const Tracker = {nonreactive: cb => cb()};
-//    const getCollections = (post) => {
-//      const Collections = {
-//        Posts: {findOne: stub()}
-//      };
-//      Collections.Posts.findOne.returns(post);
-//      return Collections;
-//    };
-
-    it('should do something');
+    it('should have edit state', (done)=> {
+      done();
+    });
+    it('should have a toggle state', (done)=> {
+      done();
+    });
+    it('should cancel button', (done)=> {
+      done();
+    });
+    it('should have a pen icon', (done)=> {
+      done();
+    });
   });
 });

@@ -89,7 +89,6 @@ const loadUsers = ()=> {
 const removeUsers = ()=> {
   console.log('removing users');
   _.each(defautUsers, (user)=> {
-    console.log(user);
     const removeUser = Meteor.users.findOne({'username': user.username});
     (removeUser) ? Meteor.users.remove(removeUser._id) : '';
   });

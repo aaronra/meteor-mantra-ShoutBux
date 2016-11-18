@@ -4,7 +4,7 @@ import {stub, spy} from 'sinon';
 import {composer} from '../create_shout';
 
 describe('shouts.containers.create_shout', () => {
-  describe('composer', () => {
+  describe('composer should contain a text area', () => {
 
 //    const Tracker = {nonreactive: cb => cb()};
 //    const getCollections = (post) => {
@@ -15,6 +15,12 @@ describe('shouts.containers.create_shout', () => {
 //      return Collections;
 //    };
 
-    it('should do something');
+    it('should have a text area', (done)=> {
+      done();
+    });
+    it('should have a button to save', (done)=> {
+      done();
+    });
+    
   });
 });

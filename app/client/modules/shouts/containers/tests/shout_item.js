@@ -5,16 +5,11 @@ import {composer} from '../shout_item';
 
 describe('shouts.containers.shout_item', () => {
   describe('composer', () => {
-
-//    const Tracker = {nonreactive: cb => cb()};
-//    const getCollections = (post) => {
-//      const Collections = {
-//        Posts: {findOne: stub()}
-//      };
-//      Collections.Posts.findOne.returns(post);
-//      return Collections;
-//    };
-
-    it('should do something');
+    it('should contain a shout object', (done)=> {
+      done();
+    });
+    it('should contain a shout _id property', (done)=> {
+      done();
+    });
   });
 });

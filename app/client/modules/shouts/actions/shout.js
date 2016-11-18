@@ -1,3 +1,4 @@
+
 export default {
   postShout({Meteor, LocalState}, shout) {
     LocalState.set('SHOUT_ERROR', null);

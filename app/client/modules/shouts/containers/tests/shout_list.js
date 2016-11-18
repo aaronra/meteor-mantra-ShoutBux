@@ -15,6 +15,8 @@ describe('shouts.containers.shout_list', () => {
 //      return Collections;
 //    };
 
-    it('should do something');
+    it('should be an array', (done)=> {
+      done();
+    });
   });
 });
