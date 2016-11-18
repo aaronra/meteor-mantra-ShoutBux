@@ -13,5 +13,14 @@ export default function () {
       };
       Shouts.insert(shout);
     },
+    'shouts.update'(shoutId, shout){
+      check(shoutId, String);
+      check(shout, String);
+      Shouts.update({_id: shoutId}, {$set: {text: shout}});
+    },
+    'shouts.delete'(shoutId){
+      check(shoutId, String);
+      Shouts.remove({_id: shoutId});
+    }
   })
 }

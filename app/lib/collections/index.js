@@ -1,6 +1,8 @@
 import Shouts from './shouts';
+import Friends from './friends';
 
 export {
   undefined,
-  Shouts
+  Shouts,
+  Friends
 };

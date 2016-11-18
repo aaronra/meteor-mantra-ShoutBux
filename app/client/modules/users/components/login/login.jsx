@@ -8,7 +8,6 @@ class Login extends React.Component {
 
   _login() {
     const {loginAction} = this.props;
-    console.log('logging in');
     loginAction(this.refs.username.value, this.refs.password.value);
   };
 

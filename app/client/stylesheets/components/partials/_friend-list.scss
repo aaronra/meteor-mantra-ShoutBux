@@ -1,0 +1,8 @@
+section#friend-list,
+section#to-follow-list {
+  ul.list-group {
+    height: 10em;
+    position: relative;
+    overflow: auto;
+  }
+}

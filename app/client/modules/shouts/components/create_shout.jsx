@@ -12,7 +12,7 @@ class CreateShout extends React.Component {
 
   _postShout() {
     const {postShout} = this.props;
-    console.log('shout');
+    
     postShout(this.refs.shout.value);
     this.refs.shout.value = '';
     this.setState({textLength: 32});

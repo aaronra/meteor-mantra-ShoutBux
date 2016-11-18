@@ -15,6 +15,19 @@ export default {
       }
     });
   },
+  logout({Meteor, FlowRouter}) {
+    Meteor.logout();
+    FlowRouter.redirect('/');
+  },
+
+  addFriend({Meteor, LocalState, FlowRouter}, friendId) {
+    LocalState.set('FOLLOW_ERROR', null);
+    if (!friendId) {
+      return LocalState.set('FOLLOW_ERROR', 'toFollowRequired');
+    }
+    Meteor.call('friends.update', friendId);
+  },
+
   clearErrors({LocalState}) {
     return LocalState.set('LOGIN_ERROR', null);
   }

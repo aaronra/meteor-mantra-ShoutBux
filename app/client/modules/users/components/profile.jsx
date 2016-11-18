@@ -5,8 +5,9 @@ class Profile extends React.Component {
     super(props);
   }
 
+
   render() {
-    const {currentUser}= this.props;
+    const {currentUser, logout, counts}= this.props;
     const {profile}= currentUser;
     return (
       <section id="user-profile">
@@ -21,7 +22,11 @@ class Profile extends React.Component {
                     <ul>
                       <li><h2 className="name">{(profile) ? profile.fullname : ''}</h2></li>
                       <li>@{currentUser.username}</li>
-                      <li></li>
+                      <li>
+                        {(Meteor.userId() != currentUser._id) ?
+                          <a href="/dashboard" className="btn">Timeline</a>
+                          : ''}
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -30,21 +35,21 @@ class Profile extends React.Component {
                     <thead>
                     <tr>
                       <th className="tableHeader">Shouts</th>
-                      <th className="tableHeader">Following</th>
+                      <th className="tableHeader">Friends</th>
                       <th className="tableHeader">Followers</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                      <td className="tableContent">1</td>
-                      <td className="tableContent">2</td>
-                      <td className="tableContent">2</td>
+                      <td className="tableContent">{counts.shouts}</td>
+                      <td className="tableContent">{counts.friends}</td>
+                      <td className="tableContent">{counts.following}</td>
                     </tr>
                     </tbody>
                   </table>
                 </div>
                 <div className="col-lg-2">
-                  <button type="button" className="btn pull-right">Log out!</button>
+                  <button type="button" onClick={logout.bind(this)} className="btn pull-right">Log out!</button>
                 </div>
               </div>
             </div>

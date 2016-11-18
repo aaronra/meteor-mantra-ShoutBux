@@ -1,0 +1,19 @@
+section#shout-list,
+section#friend-list,
+section#to-follow-list {
+  .profile-photo {
+    margin: -7px 5px 0 0;
+  }
+  .profile-name {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    span {
+      padding: 0 5px;
+      cursor: pointer;
+    }
+    .username {
+      color: $primary-color;
+    }
+  }
+}

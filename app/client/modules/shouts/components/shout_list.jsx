@@ -8,15 +8,16 @@ class ShoutList extends React.Component {
   }
 
   render() {
-    const {shouts} = this.props;
+    const {shouts, userId} = this.props;
     return (
       <section id="shout-list" className="panel panel-default">
         <PanelHeading title="Shouts"/>
         <ul className="list-group">
-          {(shouts) ? shouts.map((shout, index)=>(
-            <ShoutItem shout={shout} key={index}/>
-          ))
-            : <li><h3>No Shout posted yet!</h3></li>}
+          { (!_.isEmpty(shouts)) ?
+            shouts.map((shout, index)=>(<ShoutItem shout={shout} userId={userId} key={index}/>))
+            :
+            <li><h3>No Shout posted yet!</h3></li>
+          }
         </ul>
 
       </section>
